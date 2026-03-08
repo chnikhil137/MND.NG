@@ -1,0 +1,12 @@
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NEXT_PUBLIC_API_URL = "http://localhost:8000/api"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
